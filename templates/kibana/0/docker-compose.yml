@@ -9,7 +9,7 @@ kibana-vip:
   stdin_open: true
 nginx-proxy-conf:
   image: we87/nginx-conf:v0.3.0
-  command: "-backend=rancher --prefix=/2015-07-25"
+  command: "/bin/confd --backend rancher --prefix /2015-07-25"
   labels:
     io.rancher.container.hostname_override: container_name
 nginx-proxy:
